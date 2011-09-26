@@ -1,4 +1,4 @@
-class InvoiceController < ApplicationController
+class InvoicesController < ApplicationController
   def new
     @invoice = Invoice.new
     3.times do

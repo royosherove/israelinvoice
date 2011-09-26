@@ -1,0 +1,11 @@
+= form_for @invoice do |f|
+  %p
+    = "ID: #{f.id}"
+  = f.fields_for :items do |builder|
+    %table
+      %tr
+        %td
+          = builder.label :desc
+          = builder.text_field :desc
+  %p
+    = f.submit "Submit"
