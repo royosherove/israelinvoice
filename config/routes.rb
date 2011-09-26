@@ -1,11 +1,6 @@
 IsraelInvoice::Application.routes.draw do
-  get "invoice/new"
+  resources :invoice
 
-  get "invoice/create"
-
-  get "invoice/show"
-
-  get "invoice/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,7 +51,7 @@ IsraelInvoice::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "invoice#index"
 
   # See how all your routes lay out with "rake routes"
 
