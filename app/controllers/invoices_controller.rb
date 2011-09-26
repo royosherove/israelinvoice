@@ -7,6 +7,14 @@ class InvoicesController < ApplicationController
   end
 
   def create
+    @invoice = Invoice.new(params[:invoice])
+
+    if @invoice.save
+      redirect_to @invoice, :notice => 'New invoice created'
+    else
+      @invoice.items.build unless @invoice.items.present?
+      render 'new'
+    end
   end
 
   def show

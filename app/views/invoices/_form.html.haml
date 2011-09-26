@@ -1,11 +1,42 @@
 = form_for @invoice do |f|
   %p
     = "ID: #{f.id}"
+
+  %h2
+    Client details:
+
+  %table.client
+    %tr
+      %td
+        = f.label :name
+        = f.text_field :name
+    %tr
+      %td
+        = f.label :address
+        = f.text_field :address
+    %tr
+      %td
+        = f.label :cd
+        = f.text_field :cd
+    %tr
+      %td
+        = f.label :phone
+        = f.text_field :phone
+
+  %h2
+    Items:
+
   = f.fields_for :items do |builder|
-    %table
+    %table.item
       %tr
         %td
           = builder.label :desc
           = builder.text_field :desc
+        %td
+          = builder.label :amount
+          = builder.text_field :amount
+        %td
+          = builder.label :price
+          = builder.text_field :price
   %p
     = f.submit "Submit"
