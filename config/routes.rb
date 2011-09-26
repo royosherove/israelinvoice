@@ -1,4 +1,12 @@
 IsraelInvoice::Application.routes.draw do
+  get "invoice/new"
+
+  get "invoice/create"
+
+  get "invoice/show"
+
+  get "invoice/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
