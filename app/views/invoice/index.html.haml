@@ -1,0 +1,15 @@
+%table
+  - @invoices.each do |invoice|
+    %th
+      %td
+        Client
+      %td
+        "#items"
+      %td
+        Total amount
+    %tr
+      %td= "#{invoice.client.name}"
+      %td= "#{invoice.total_items}"
+      %td= "#{invoice.total_amount}"
+      
+    

@@ -38,3 +38,28 @@ Migrating to AddIdToItem (20110926162642)
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("clients")
   [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("invoices")[0m
   [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("items")
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateClients (20110926162228)
+Migrating to CreateItems (20110926162429)
+Migrating to CreateInvoices (20110926162622)
+Migrating to AddIdToItem (20110926162642)
+  [1m[35mSQL (1.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("clients")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("invoices")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("items")
