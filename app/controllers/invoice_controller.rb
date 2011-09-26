@@ -1,5 +1,9 @@
 class InvoiceController < ApplicationController
   def new
+    @invoice = Invoice.new
+    3.times do
+      item = @invoice.items.build
+    end
   end
 
   def create

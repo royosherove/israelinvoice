@@ -1,0 +1,15 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+*.swp
+webrat.log
+*~
+log/*
+.idea/*
+coverage/*
+data
+public/system/*
+.sass-cache/
+public/assets/*
+tags
