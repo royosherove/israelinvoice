@@ -1,5 +1,5 @@
 IsraelInvoice::Application.routes.draw do
-  resources :invoice
+  resources :invoices
 
 
   # The priority is based upon order of creation:
